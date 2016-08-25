@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE idea-plugin PUBLIC
+  "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin version="2" url="https://github.com/TobseF/">
+  <id>de.tfr.idea.plugins.i18n-formatter</id>
+  <name>i18n-Formatter</name>
+  <category>Editor</category>
+  <description><![CDATA[
+<html>
+  Add <em>Format Messages.properties</em> action in <em>Edit</em> menu to format the current opened message.property-file.
+</html>
+    ]]></description>
+  <version>1.0.4</version>
+  <vendor email="tfr@itscope.de" url="https://github.com/tfr">Tobias Fritz</vendor>
+  <change-notes><![CDATA[
+<html>
+  <b>1.0.4</b> (24/08/2016)
+  <ul>
+    <li>Sort keys inside a group</li>
+    <li>Ignore lines with missing value</li>
+    <li>Ignore lines with missing key</li>
+  </ul>
+
+  <b>1.0.3</b> (14/04/2016)
+  <ul>
+    <li>Add 'formatter:off' on first line</li>
+  </ul>
+
+  <b>1.0.2</b> (03/01/2016)
+  <ul>
+    <li>Support for all IntelliJ Platform Products</li>
+  </ul>
+
+  <b>1.0</b> (02/01/2016)
+  <ul>
+    <li>Initial release</li>
+  </ul>
+</html>
+]]></change-notes>
+  <idea-version since-build="90.10000"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <actions>
+    <group id="linessorter.sort.group">
+      <separator/>
+      <action id="linessorter.sort"
+              class="tf.idea.plugins.i18n.formatter.FormatAction"
+              text="Format Messages.properties"
+              description="Format current opened message.property file">
+        <keyboard-shortcut keymap="$default" first-keystroke="alt shift l"/>
+      </action>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </group>
+  </actions>
+
+</idea-plugin>
