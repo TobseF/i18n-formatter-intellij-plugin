@@ -1,4 +1,4 @@
-**I18N-Formatter** is a plugin for Intellij IDEA which formats a Message.Properties file
+**I18N-Formatter** is a plugin for [Intellij IDEA](https://www.jetbrains.com/idea/) which formats a `message.properties` file.
 
 Just call *Edit->Format Messages.properties* menu, or *Alt+ Shift+L* shortcut.
 
@@ -8,16 +8,18 @@ From public plugin repository: [i18n-Formatter](https://plugins.jetbrains.com/pl
 ##Notes
 The property file has to be open in the editor as active tab.
 
-Formatting consists of three steps:
+The formatter adapts the eclipse message.properties style.
+
+The formatting consists of three steps:
 
 1. Sort keys
 2. Group key by parent key
 3. Align values bases on longest key in the group
 
 Groups are separated by new lines 
-First line includes 'formatter:off' to protect file against the IntelliJ formatter
+First line includes 'formatter:off' to protect file against the IntelliJ formatter.
 
-##Samlpe
+##Sample
 ```properties
 #@formatter:off
 Popup_Messages_Alter   = Alert
