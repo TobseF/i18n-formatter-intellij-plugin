@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE idea-plugin PUBLIC
   "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
-<idea-plugin version="2" url="https://github.com/TobseF/">
+<idea-plugin url="https://github.com/TobseF/">
   <id>de.tfr.idea.plugins.i18n-formatter</id>
-  <name>i18n-Formatter</name>
+  <name>I18n-Formatter</name>
   <category>Editor</category>
   <description><![CDATA[
 <html>
@@ -39,6 +39,7 @@
 ]]></change-notes>
   <idea-version since-build="90.10000"/>
 
+  <depends>com.intellij.modules.platform </depends>
   <depends>com.intellij.modules.lang</depends>
 
   <actions>
